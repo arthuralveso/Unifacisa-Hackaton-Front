@@ -9,6 +9,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "author": {
+    "name": "Sérgio Davi Marinho",
+    "email": "sergio.teotonio@ctis.com.br"
+  },
   "private": false,
   "dependencies": {
     "@angular/animations": "8.0.1",
