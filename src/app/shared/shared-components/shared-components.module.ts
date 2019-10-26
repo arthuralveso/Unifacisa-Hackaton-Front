@@ -1,14 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ContainerPadraoComponent } from './components/container-padrao/container-padrao.component';
 import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
   declarations: [
-    HeaderComponent,
-    ContainerPadraoComponent
+    HeaderComponent
   ],
   imports: [
     CommonModule,
@@ -16,8 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
   ],
   exports: [
     CommonModule,
-    HeaderComponent,
-    ContainerPadraoComponent
+    HeaderComponent
   ]
 })
 export class SharedComponentsModule { }
