@@ -1,0 +1,23 @@
+<app-container-padrao titulo="Produtos">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Valor</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Opções</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let produto of produtos">
+        <td>{{produto.nome}}</td>
+        <td>{{produto.valor | currency: 'BRL' : true}}</td>
+        <td>{{produto.desc}}</td>
+        <td>
+          <button class="btn btn-danger btn-sm mr-2">Remover</button>
+          <button class="btn btn-primary btn-sm">Editar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</app-container-padrao>
