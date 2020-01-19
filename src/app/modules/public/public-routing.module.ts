@@ -15,6 +15,10 @@ const routes: Routes = [
       {
         path: 'produtos',
         loadChildren: './modules/fm-produtos/fm-produtos.module#FmProdutosModule'
+      },
+      {
+        path: 'tela-inicial',
+        loadChildren: './modules/fm-tela-inicial/tela-inicial.module#TelaInicialModule'
       }
     ]}
 ];
