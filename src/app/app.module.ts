@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { PublicModule } from './modules/public/public.module';
 import { SharedComponentsModule } from './shared/shared-components/shared-components.module';
+import { ProdutosService } from './modules/public/modules/fm-produtos/Services/produtos.service';
 @NgModule({
   declarations: [
     AppComponent
