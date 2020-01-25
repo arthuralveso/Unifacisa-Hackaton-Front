@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoriasModel } from '../../Models/categoria.model';
+import { CategoriasService } from '../../Services/categorias.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-pesquisar-categoria',
@@ -7,9 +10,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PesquisarCategoriaComponent implements OnInit {
 
-  constructor() { }
+  categorias : CategoriasModel[] = [];
+
+  constructor(
+    private CategoriasService : CategoriasService,
+    private router : Router,
+    private route : ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.CategoriasService.getCategoria().subscribe(listaCategorias => {
+      this.categorias = listaCategorias;
+    })
+  }
+
+  edit(id){
+    this.router.navigate(['editar', id], {relativeTo: this.route})
+
+  }
+
+  delete(categoria){
+    this.CategoriasService.deleteCategoria(categoria.id).subscribe(
+        () => {this.CategoriasService.getCategoria()
+          .subscribe(listaCategorias => {
+          this.categorias = listaCategorias;
+        });}
+      
+    );
   }
 
 }

@@ -7,9 +7,10 @@ import { ProdutosService } from './Services/produtos.service';
 import { SharedComponentsModule } from 'src/app/shared/shared-components/shared-components.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CadastrarProdutoComponent } from './components/cadastrar-produto/cadastrar-produto.component';
+import { AtualizarProdutosComponent } from './components/atualizar-produtos/atualizar-produtos.component';
 
 @NgModule({
-  declarations: [PesquisarProdutosComponent, CadastrarProdutoComponent],
+  declarations: [PesquisarProdutosComponent, CadastrarProdutoComponent, AtualizarProdutosComponent],
   imports: [
     CommonModule,
     FmProdutosRoutingModule,

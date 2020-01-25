@@ -1,3 +1,26 @@
 <app-container-padrao titulo="Categorias">
+  <div>
+    <h4 class="float-right">Adicionar</h4>
+  </div>
+  <div class="float-right">
+    <button class="btn btn-primary btn-custom" type="submit" routerLink="cadastro" > + </button>
+  </div>
   
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let categoria of categorias">
+        <td>{{categoria.descricao}}</td>
+        <td>
+          <button class="float-right btn-custom btn-danger btn-sm mr-2" (click)="delete(categoria)">Remover</button>
+          <button class="float-right btn-custom btn-primary btn-sm" (click)="edit(categoria.id)">Editar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </app-container-padrao>

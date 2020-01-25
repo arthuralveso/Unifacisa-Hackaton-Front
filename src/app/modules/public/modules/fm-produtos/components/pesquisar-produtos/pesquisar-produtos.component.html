@@ -1,4 +1,6 @@
 <app-container-padrao titulo="Produtos">
+  <label class="float">Adicionar</label>
+  <button class=" float btn btn-primary" type="submit" routerLink="cadastro"> + </button>
   <table class="table table-striped">
     <thead>
       <tr>
@@ -14,8 +16,8 @@
         <td>{{produto.valor | currency: 'BRL' : true}}</td>
         <td>{{produto.desc}}</td>
         <td>
-          <button class="btn btn-danger btn-sm mr-2">Remover</button>
-          <button class="btn btn-primary btn-sm">Editar</button>
+          <button class="btn btn-danger btn-sm mr-2" (click)="onDelete(produto)">Remover</button>
+          <button class="btn btn-primary btn-sm" (click)="onEdit(produto.id)">Editar</button>
         </td>
       </tr>
     </tbody>

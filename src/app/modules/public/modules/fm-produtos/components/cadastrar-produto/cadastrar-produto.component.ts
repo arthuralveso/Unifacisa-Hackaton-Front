@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ProdutosService } from '../../Services/produtos.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-cadastrar-produto',
@@ -13,7 +14,8 @@ export class CadastrarProdutoComponent implements OnInit {
 
   constructor(
     private formBuilder : FormBuilder,
-    private service : ProdutosService
+    private service : ProdutosService,
+    private location : Location
   ) { }
 
   ngOnInit() {
@@ -28,10 +30,16 @@ export class CadastrarProdutoComponent implements OnInit {
     this.submitted = true;
     if(this.form.valid){
       this.service.createProduto(this.form.value).subscribe(
-        () => {console.log(this.form.value); }
+        () => {
+          console.log(this.form.value);
+          this.location.back();
+        }
       );
     }
-
+  }
+  oncancel(){
+    this.form.reset();
+  
   }
 
 }

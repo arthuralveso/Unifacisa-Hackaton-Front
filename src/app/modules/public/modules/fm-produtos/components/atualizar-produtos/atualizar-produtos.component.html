@@ -1,0 +1,30 @@
+<app-container-padrao titulo="Atualizar Produto">
+  <form novalidate [formGroup]="form">
+      <div class="form-row">
+        <div class="col">
+          <label for="inputName">Nome do Produto</label>
+          <input type="text" class="form-control" placeholder="Nome" required formControlName="nome">
+        </div>
+        <div class="col">
+          <label for="inputDesc">Descrição do produto</label>
+          <input type="text" class="form-control" placeholder="Descrição" required formControlName="desc">
+        </div>
+      </div>
+      <div class="form-row">
+          <div class="col">
+            <label for="inputValue">Valor do produto</label>
+            <input type="number" class="form-control" placeholder="Valor" required formControlName="valor">
+          </div>
+          <div class="col">
+              <label for="inputState">Categoria que o produto pertence</label>
+              <select id="inputState" class="form-control">
+                <option selected>Selecionar...</option>
+                <option>...</option>
+              </select>
+          </div>
+        </div>
+        <button type="button" class="btn btn-danger mr-2 mt-2" (click)="onCancel()">Cancelar</button>
+        <button type="submit" class="btn btn-primary mt-2" (click)="update()">Salvar</button>
+
+    </form>
+</app-container-padrao>
