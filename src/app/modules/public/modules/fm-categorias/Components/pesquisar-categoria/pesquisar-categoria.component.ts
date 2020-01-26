@@ -39,4 +39,8 @@ export class PesquisarCategoriaComponent implements OnInit {
     );
   }
 
+  navigate(){
+    this.router.navigate(['cadastro'], {relativeTo: this.route});
+  }
+
 }

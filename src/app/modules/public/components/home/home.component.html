@@ -4,6 +4,15 @@
         Hackathon - Unifacisa
     </a>
 </nav>
+
 <div class="container">
+    <app-container-padrao titulo="Tela inicial" class="padrao" *ngIf="showMenu">
+        <div class="container-buttons">
+          <div class="buttons">
+            <button type="button" class="btn btn-outline-secondary btn-style" routerLink="produtos" (click)="changeMenu()">PRODUTOS</button>
+            <button type="button" class="btn btn-outline-secondary btn-style" routerLink="categorias" (click)="changeMenu()">CATEGORIAS</button>
+          </div>
+        </div>
+    </app-container-padrao>
     <router-outlet></router-outlet>
 </div>
