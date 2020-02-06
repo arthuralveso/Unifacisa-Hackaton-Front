@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,17 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  
+
   showMenu = true;
 
   constructor(
+    private router : Router
   ) { }
 
   ngOnInit() {
-     
+
   }
-  
-  changeMenu(){
-    this.showMenu = false;
+
+  productNavigation() {
+    this.router.navigateByUrl('produtos')
+  }
+
+
+  categoryNavigation() {
+    this.router.navigateByUrl('categorias')
   }
 }
