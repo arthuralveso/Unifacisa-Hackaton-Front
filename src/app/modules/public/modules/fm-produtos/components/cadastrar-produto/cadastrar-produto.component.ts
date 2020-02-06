@@ -37,9 +37,9 @@ export class CadastrarProdutoComponent implements OnInit {
       );
     }
   }
-  oncancel(){
+  cancel(){
     this.form.reset();
-  
+    this.location.back();
   }
 
 }

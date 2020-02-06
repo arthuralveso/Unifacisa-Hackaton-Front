@@ -51,7 +51,7 @@ export class AtualizarCategoriaComponent implements OnInit {
       this.service.uptadeCategoria(this.form.value).subscribe(
         () => {
           this.location.back();
-          
+
         }
       )
     }
@@ -59,6 +59,7 @@ export class AtualizarCategoriaComponent implements OnInit {
 
   cancel(){
     this.form.reset();
+    this.location.back();
   }
 
 

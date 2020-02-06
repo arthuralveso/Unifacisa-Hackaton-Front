@@ -40,6 +40,7 @@ export class CadastrarCategoriaComponent implements OnInit {
   cancel(){
     this.submitted = false;
     this.form.reset();
+    this.location.back();
 
   }
 }

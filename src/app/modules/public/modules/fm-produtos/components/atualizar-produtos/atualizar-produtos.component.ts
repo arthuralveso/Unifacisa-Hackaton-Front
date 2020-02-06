@@ -37,7 +37,7 @@ export class AtualizarProdutosComponent implements OnInit {
       nome : ["", [Validators.required]],
       desc : ["", [Validators.required]],
       valor : ["", [Validators.required]]
-    }) 
+    })
   }
 
   updatedForm(produto){
@@ -62,6 +62,7 @@ export class AtualizarProdutosComponent implements OnInit {
 
   onCancel(){
     this.form.reset();
+    this.location.back();
   }
 
 }
