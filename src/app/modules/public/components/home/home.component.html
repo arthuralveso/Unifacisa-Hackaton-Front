@@ -1,18 +1,10 @@
-<nav class="navbar navbar-dark bg-dark mb-5">
-    <a class="navbar-brand" href="#">
-        <img src="favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
-        Hackathon - Unifacisa
-    </a>
-</nav>
-
 <div class="container">
     <app-container-padrao titulo="Tela inicial" class="padrao" *ngIf="showMenu">
         <div class="container-buttons">
           <div class="buttons">
-            <button type="button" class="btn btn-outline-secondary btn-style" routerLink="produtos" (click)="changeMenu()">PRODUTOS</button>
-            <button type="button" class="btn btn-outline-secondary btn-style" routerLink="categorias" (click)="changeMenu()">CATEGORIAS</button>
+            <button type="button" class="btn btn-outline-secondary btn-style" (click)="productNavigation()">PRODUTOS</button>
+            <button type="button" class="btn btn-outline-secondary btn-style" (click)="categoryNavigation()">CATEGORIAS</button>
           </div>
         </div>
     </app-container-padrao>
-    <router-outlet></router-outlet>
 </div>
