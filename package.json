@@ -28,7 +28,7 @@
     "@angular/router": "8.0.1",
     "@fortawesome/fontawesome-free": "5.5.0",
     "bootstrap": "^4.3.1",
-    "jquery": "3.4.0",
+    "jquery": "3.5.0",
     "json-server": "^0.15.1",
     "ngx-bootstrap": "3.1.2",
     "ngx-spinner": "6.1.2",
